@@ -218,75 +218,7 @@ Dataset files are not duplicated in this repository unless redistribution terms 
 
 ---
 
-## Evaluation Metrics
 
-Rating prediction:
-
-- RMSE
-- MAE
-
-Ranking:
-
-- HR@5
-- HR@10
-- HR@20
-- NDCG@5
-- NDCG@10
-- NDCG@20
-
-The official sampled ranking evaluation uses one positive item and 100 negative items per query.
-
----
-
-## Main Five-Seed Results
-
-Consensus-aware model, seeds 42--46:
-
-| Metric | Mean ± SD |
-|---|---:|
-| RMSE | **0.267100 ± 0.008173** |
-| MAE | **0.191724 ± 0.004050** |
-| HR@5 | **0.586897 ± 0.002438** |
-| HR@10 | **0.766345 ± 0.004763** |
-| HR@20 | **0.877103 ± 0.004400** |
-| NDCG@5 | **0.401818 ± 0.001629** |
-| NDCG@10 | **0.460082 ± 0.002435** |
-| NDCG@20 | **0.488260 ± 0.001345** |
-
----
-
-## Consensus Ablation
-
-| Metric | Without Consensus | With Consensus |
-|---|---:|---:|
-| RMSE ↓ | 0.267909 | **0.267100** |
-| MAE ↓ | 0.192217 | **0.191724** |
-| HR@5 ↑ | **0.587172** | 0.586897 |
-| HR@10 ↑ | 0.765931 | **0.766345** |
-| HR@20 ↑ | **0.877379** | 0.877103 |
-| NDCG@5 ↑ | 0.401392 | **0.401818** |
-| NDCG@10 ↑ | 0.459483 | **0.460082** |
-| NDCG@20 ↑ | 0.487857 | **0.488260** |
-
-Consensus produces modest improvements in rating accuracy and most ranking measures, while HR@5 and HR@20 remain essentially comparable.
-
----
-
-## Reproduced Baseline Comparison
-
-The following values correspond to reproduced experiments used for comparison with the proposed method.
-
-| Method | HR@5 | HR@10 | NDCG@5 | NDCG@10 |
-|---|---:|---:|---:|---:|
-| Popularity | 0.5917 | 0.7766 | 0.4037 | 0.4635 |
-| AGREE | 0.5876 | 0.7883 | 0.4077 | 0.4727 |
-| GroupIM | 0.6110 | 0.7972 | 0.4189 | 0.4796 |
-| CubeRec | 0.6331 | 0.8131 | 0.4310 | 0.4899 |
-| **Consensus-Aware Shared Low-Rank** | 0.5869 | 0.7663 | 0.4018 | 0.4601 |
-
-These results should be interpreted as a reproducibility and model-complexity comparison rather than a state-of-the-art claim.
-
----
 
 ## Baseline Implementations and References
 
@@ -347,25 +279,6 @@ AlignGroup reports experiments on CAMRa2011 and Mafengwo.
 
 ---
 
-## Important Note on Published vs Reproduced Results
-
-Published numbers and reproduced numbers are kept separate.
-
-Differences in
-
-- interaction filtering,
-- train/validation/test preprocessing,
-- negative sampling,
-- candidate construction,
-- random seeds,
-- hyperparameter selection,
-- implementation version,
-
-can materially affect CAMRa2011 results.
-
-For this reason, this repository does **not** treat published scores from different codebases as strictly protocol-matched comparisons.
-
----
 
 ## Running the Model
 
