@@ -339,69 +339,9 @@ The reusable implementation should remain in
 src/SharedLowRankGRS.jl
 ```
 
-so that the notebook and scripts call the same code rather than maintaining duplicate implementations.
 
----
 
-## Reproducibility
 
-Recommended experimental settings:
 
-```text
-latent rank            = 32
-Stage-1 max epochs     = 300
-Stage-2 max epochs     = 300
-Stage-1 patience       = 15
-Stage-2 patience       = 20
-Stage-1 learning rate  = 0.005
-Stage-2 learning rate  = 0.001
-consensus gamma        = 0.01
-consensus eta          = 0.90
-consensus mu           = 1.0
-ranking tau            = 0.2
-seeds                  = 42, 43, 44, 45, 46
-```
-
-Exact experiment settings should be kept in a single configuration object in the source code.
-
----
-
-## Results Files
-
-Recommended result files:
-
-```text
-results/proposed_model.csv
-results/reproduced_baselines.csv
-```
-
-`proposed_model.csv` should contain one row per random seed.
-
-`reproduced_baselines.csv` should document:
-
-- method,
-- repository used,
-- preprocessing source,
-- seed,
-- HR@K,
-- NDCG@K,
-- runtime if available,
-- compatibility changes if any.
-
----
-
-## Citation
-
-A formal citation will be added after publication.
-
-For now, if you use this repository, please cite the corresponding paper/preprint once available.
-
-```bibtex
-@article{sharedlowrankgrs,
-  title   = {Shared Low-Rank Relational Learning for Group Recommendation with Consensus-Aware Regularisation},
-  author  = {To be added},
-  year    = {2026}
-}
-```
 
 
