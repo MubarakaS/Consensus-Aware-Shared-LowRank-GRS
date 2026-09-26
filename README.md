@@ -491,22 +491,4 @@ For now, if you use this repository, please cite the corresponding paper/preprin
 }
 ```
 
----
 
-## License
-
-Choose a license before public release.
-
-For research code, common options include:
-
-- MIT License
-- BSD 3-Clause License
-- Apache License 2.0
-
-Dataset licensing remains separate from the license of this repository.
-
----
-
-## Acknowledgements
-
-The baseline comparison makes use of public implementations and released research code from the group recommender systems community. Please cite the corresponding original papers when using those methods.
