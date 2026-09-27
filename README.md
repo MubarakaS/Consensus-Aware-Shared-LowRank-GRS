@@ -26,8 +26,6 @@ The learned group and item representations are retained and the low-rank
 group-item scores are refined for top-K recommendation using a
 group-specific scale and item bias.
 
----
-
 ## Running the Model
 
 From the repository root, load the Julia implementation:
@@ -35,6 +33,7 @@ From the repository root, load the Julia implementation:
 ```julia
 include("src/SharedLowRankGRS.jl")
 using .SharedLowRankGRS
+
 ---
 ## Repository Structure
 
