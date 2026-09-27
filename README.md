@@ -35,7 +35,13 @@ From the repository root, load the Julia implementation:
 ```julia
 include("src/SharedLowRankGRS.jl")
 using .SharedLowRankGRS
+```
 
+---
+
+## Repository Structure
+
+```text
 Consensus-Aware-Shared-LowRank-GRS/
 ├── README.md
 ├── src/
@@ -44,3 +50,4 @@ Consensus-Aware-Shared-LowRank-GRS/
 │   └── Consensus_Aware_Shared_LowRank.ipynb
 └── data/
     └── README.md
+```
