@@ -1,5 +1,7 @@
 # Consensus-Aware Shared Low-Rank Group Recommendation
 
+# Consensus-Aware Shared Low-Rank Group Recommendation
+
 This repository contains a Julia implementation of a
 **consensus-aware shared low-rank model for group recommendation**.
 
@@ -26,6 +28,8 @@ The learned group and item representations are retained and the low-rank
 group-item scores are refined for top-K recommendation using a
 group-specific scale and item bias.
 
+---
+
 ## Running the Model
 
 From the repository root, load the Julia implementation:
@@ -36,8 +40,6 @@ using .SharedLowRankGRS
 
 ---
 ## Repository Structure
-
-```text
 Consensus-Aware-Shared-LowRank-GRS/
 ├── README.md
 ├── src/
