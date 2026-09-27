@@ -28,6 +28,14 @@ group-specific scale and item bias.
 
 ---
 
+## Running the Model
+
+From the repository root, load the Julia implementation:
+
+```julia
+include("src/SharedLowRankGRS.jl")
+using .SharedLowRankGRS
+---
 ## Repository Structure
 
 ```text
@@ -40,10 +48,4 @@ Consensus-Aware-Shared-LowRank-GRS/
 └── data/
     └── README.md
 
-## Running the Model
 
-From the repository root, load the Julia implementation:
-
-```julia
-include("src/SharedLowRankGRS.jl")
-using .SharedLowRankGRS
